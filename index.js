@@ -32,7 +32,7 @@ require("./app/routes/productRoutes")(app)
 require("./app/routes/filterRoutes")(app)
 require("./app/routes/userRoutes")(app)
 require("./app/routes/orderRoutes")(app)
-// console.log(process.env.PORT);
+console.log(process.env.PORT);
 
 app.listen(process.env.PORT,()=>{
     console.log("server is running on "+process.env.PORT);
