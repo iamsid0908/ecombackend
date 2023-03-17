@@ -1,0 +1,64 @@
+.car{
+    border: 1px solid red;
+    height: auto;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 10vh;
+}
+.a{
+    margin: 10px;
+}
+.car-img{
+    border: 1px solid red;
+    border: none;
+    outline: none;
+    width: 800px;
+    height: 305px;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 1);
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+.hi{
+    background-image: url("../../../public/assets/2.jpg");
+    height: 305px;
+    background-size: cover;
+    width: 500px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:  rgb(0, 155, 216);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border: 1px solid red;
+}
+.hii{
+    background-image: url("../../../public/assets/3.jpg");
+    height: 305px;
+    background-size: cover;
+    width: 500px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:  rgb(146, 13, 13);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border: 1px solid red;
+}
+.hiii{
+    background-image: url("../../../public/assets/ear1.jpeg");
+    height: 305px;
+    background-size: cover;
+    width: 500px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:  rgb(90, 88, 88);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border: 1px solid red;
+}
