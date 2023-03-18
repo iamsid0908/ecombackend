@@ -1,5 +1,29 @@
+.search{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-ele{
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 750px;
+    height: 34px;
+    border-radius: 10px;
+}
+.search-ele input{
+    height: 28px;
+    width: 660px;
+    margin-left: 8px;
+    border: none;
+    outline: none;
+}
+
+
 .car{
-    border: 1px solid red;
+  
     height: auto;
     margin-left: 8%;
     margin-right: 8%;
@@ -9,7 +33,7 @@
     margin: 10px;
 }
 .car-img{
-    border: 1px solid red;
+    
     border: none;
     outline: none;
     width: 800px;
@@ -32,7 +56,8 @@
     font-size: 30px;
     font-weight: 600;
     font-family: sans-serif;
-    border: 1px solid red;
+    border-radius: 10px;
+  
 }
 .hii{
     background-image: url("../../../public/assets/3.jpg");
@@ -46,8 +71,10 @@
     font-size: 30px;
     font-weight: 600;
     font-family: sans-serif;
-    border: 1px solid red;
+    border-radius: 10px;
+  
 }
+
 .hiii{
     background-image: url("../../../public/assets/ear1.jpeg");
     height: 305px;
@@ -60,5 +87,24 @@
     font-size: 30px;
     font-weight: 600;
     font-family: sans-serif;
+    border-radius: 10px;
+  
+}
+.products{
     border: 1px solid red;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 12vh;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.menu{
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-btn{
+    margin-right: 45%;
+   
 }

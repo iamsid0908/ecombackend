@@ -1,9 +1,22 @@
 import React from 'react'
-
+import { useEffect ,useState} from 'react';
 import Slider from "react-slick";
+import Products from '../Products/Products';
 import "./Home.css"
+import SearchIcon from '@mui/icons-material/Search';
 
 function Home() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:8000/api/product")
+    .then(res=>res.json())
+    .then(data1=>{
+      // console.log(data1);
+      setData(data1);
+    })
+  }, [])
+  // console.log(data);
+  
     const settings = {
     dots: true,
     infinite: true,
@@ -17,6 +30,14 @@ function Home() {
   };
   return (
     <>
+    <div className='search'>
+      <div className='search-ele'>
+        <input type="text" placeholder='Search'/>
+        <SearchIcon/>
+      </div>
+    </div>
+
+
     <div className='car'>
         <Slider {...settings}>
           
@@ -31,6 +52,11 @@ function Home() {
           <div className='hiii'>Grab Upto 50% off <br></br>in this Sale</div>
           </div>
           </Slider>
+    </div>
+    <div className='products'>
+      {data.map(pro=>(
+        <Products pro={pro}/>
+      ))}
     </div>
     </>
   )

@@ -1,21 +1,17 @@
 import React from 'react'
 import "./Header.css"
+import MenuIcon from '@mui/icons-material/Menu';
 
-function Header() {
+function Header({openSidebar}) {
   return (
     <div className='header'>
-        <ul className='left'>
-          <li><img src='./assets/ecom.png' alt='no' width="50px" height="50px"/></li>
-        </ul>
-        <div className='search'> <input type="text" placeholder='Search'/> </div>
-        
-          <ul className='right'>
-            
-            <li>Blog</li>
-            <li>Product</li>
-            <li>SignUp</li>
-          </ul>
-        
+      <div className='menu'>
+      <MenuIcon onClick={openSidebar} className="menu-btn"/>
+        {/* <button onClick={openSidebar} className=""> btn</button> */}
+        <p>
+          <img src='./assets/ecom.png' alt='ni' width="30px" height="30px"/>
+        </p>
+        </div>
     </div>
   )
 }

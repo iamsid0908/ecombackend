@@ -1,0 +1,26 @@
+.card1{
+    display: flex;
+    border: 1px solid red;
+}
+.card{
+    border: 1px solid gray;
+    width: 200px;
+    gap: 20px;
+   
+}
+.common{
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-left: 10px;
+}
+.btn-cart{
+    border: 1px solid #e94610;
+    background-color: #e94610;
+    color: white;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
