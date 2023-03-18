@@ -4,15 +4,7 @@ import Slider from "react-slick";
 import "./Home.css"
 
 function Home() {
-    const cards = [
-        { title: "1", imageUrl: "./assets/2.jpeg" ,text:"hi"},
-        { title: "2", imageUrl: "./assets/2.jpeg" ,text:"hi"},
-        { title: "3", imageUrl: "./assets/2.jpeg" ,text:"gi"},
-        { title: "4", imageUrl: "./assets/2.jpeg" ,text:"ghii"},
-      ];
-
-     
-  const settings = {
+    const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
