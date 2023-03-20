@@ -7,15 +7,22 @@ import SearchIcon from '@mui/icons-material/Search';
 
 function Home() {
   const [data, setData] = useState([]);
+  const [input,setInput]=useState("");
+  
+
+  
+
+ 
+console.log(input);
   useEffect(() => {
     fetch("http://localhost:8000/api/product")
     .then(res=>res.json())
     .then(data1=>{
-      // console.log(data1);
       setData(data1);
     })
-  }, [])
-  // console.log(data);
+  
+}, [])
+  
   
     const settings = {
     dots: true,
@@ -28,11 +35,16 @@ function Home() {
     focusOnSelect:true,
     slidesToScroll: 1
   };
+
+  
+  // console.log(data2)
   return (
     <>
     <div className='search'>
       <div className='search-ele'>
-        <input type="text" placeholder='Search'/>
+        <input type="text" placeholder='Search' onChange={(e)=>{
+          setInput(e.target.value);
+        }}/>
         <SearchIcon/>
       </div>
     </div>
@@ -42,8 +54,7 @@ function Home() {
         <Slider {...settings}>
           
           <div className='a'>
-           
-            <div className='hi'>Grab Upto 50% off <br></br>in this Sale</div>
+          <div className='hi'>Grab Upto 50% off <br></br>in this Sale</div>
           </div>
           <div className='a'>
           <div className='hii'>Grab Upto 50% off <br></br>in this Sale</div>
