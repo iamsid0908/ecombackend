@@ -2,7 +2,7 @@ import React from 'react'
 import "./Products.css"
 
 function Products({pro}) {
-    // console.log(pro)
+    console.log(pro)
   return (
     
         <div className='card'>

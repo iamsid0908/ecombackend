@@ -3,7 +3,7 @@ const Product=require("../model/productMode")
 exports.search=async(req,res)=>{
     var data;
     try{
-    console.log(req.params.key)
+    
      data =await Product.find({
         "$or":[
             {"name":{$regex:req.params.key}},

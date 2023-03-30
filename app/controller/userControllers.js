@@ -1,19 +1,17 @@
 const sendToken = require("../../utils/jwtTokens");
 const userModel=require("../model/userModels");
 const sendEmail=require("../../utils/sendEmail")
+const cloudinary=require("cloudinary")
 
 
 exports.userRegister=async(req,res)=>{
     try{
-    const{name,email,password}=req.body;
-    const user= await userModel.create({
+        const{name,email,password,avatar}=req.body;
+        const user= await userModel.create({
         name,
         email,
         password,
-        avatar:{
-            public_id:"this is a sample id",
-            url:"so",
-        }
+        avatar,
     })
    sendToken(user,201,res)
 }catch(err){
@@ -39,7 +37,7 @@ exports.userLogin=async(req,res,next)=>{
         const isPasswordMatched=await user.comparePassword(password);
        
         if(!isPasswordMatched){
-            return res.status(4004).send({message:"user email password not found"});
+            return res.status(404).send({message:"user email password not found"});
         }
         
        

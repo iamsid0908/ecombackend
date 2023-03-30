@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Header.css"
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 function Header({openSidebar}) {
   return (
@@ -10,7 +11,10 @@ function Header({openSidebar}) {
         {/* <button onClick={openSidebar} className=""> btn</button> */}
         <p>
           <img src='./assets/ecom.png' alt='ni' width="30px" height="30px"/>
+          
         </p>
+        <Link style={{textDecoration: 'none'}} to="/login"><p className="l2">Log-in</p></Link>
+        {/* <p>Login</p> */}
         </div>
     </div>
   )

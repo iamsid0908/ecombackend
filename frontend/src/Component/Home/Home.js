@@ -1,28 +1,44 @@
 import React from 'react'
-import { useEffect ,useState} from 'react';
+import {useContext} from 'react';
 import Slider from "react-slick";
 import Products from '../Products/Products';
 import "./Home.css"
 import SearchIcon from '@mui/icons-material/Search';
+import { DataContext } from '../Context/DataContext';
+import Spinnerr from '../Common/Spinnerr';
+
+
 
 function Home() {
-  const [data, setData] = useState([]);
-  const [input,setInput]=useState("");
+  const {setData,
+    setInput,
+    setPrice,
+    allData,
+    input,
+    price,
+    data,
+    spinner}=useContext(DataContext);
+  const handle=async()=>{
+    if(input===""){
+      return;
+    }
+  fetch(`http://localhost:8000/api/product/filter/${input}`)
+  .then(res=>res.json())
+  .then(data2=>{
+    setData(data2)
+  })
+}
   
-
-  
-
- 
-console.log(input);
-  useEffect(() => {
-    fetch("http://localhost:8000/api/product")
-    .then(res=>res.json())
-    .then(data1=>{
-      setData(data1);
-    })
-  
-}, [])
-  
+const handlePrice=(e)=>{
+  setPrice(e.target.value);
+  const findPrice=e.target.value;
+  console.log(findPrice);
+  const pricedata=allData.filter((Dress)=>{
+    return Dress.price<=findPrice;
+ })
+ setData(pricedata);
+ setPrice(findPrice);
+}
   
     const settings = {
     dots: true,
@@ -37,7 +53,7 @@ console.log(input);
   };
 
   
-  // console.log(data2)
+ 
   return (
     <>
     <div className='search'>
@@ -45,7 +61,7 @@ console.log(input);
         <input type="text" placeholder='Search' onChange={(e)=>{
           setInput(e.target.value);
         }}/>
-        <SearchIcon/>
+        <SearchIcon onClick={handle}/>
       </div>
     </div>
 
@@ -64,11 +80,25 @@ console.log(input);
           </div>
           </Slider>
     </div>
+
+    <div className='price-filter'>
+      <div>
+      <h3>Price Range</h3>
+          <input type="range"  min="400" max="19000" onInput={handlePrice}  value={price}/>
+          <p>Price Rs.{price}</p>
+      </div>
+    </div>
+    
+    {!spinner?
+    <div className='spinner'>
+      <Spinnerr/>
+    </div>:
     <div className='products'>
       {data.map(pro=>(
         <Products pro={pro}/>
       ))}
     </div>
+    }
     </>
   )
 }

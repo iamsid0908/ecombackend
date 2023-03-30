@@ -92,7 +92,8 @@
   
 }
 .products{
-   
+   border: 1px solid red;
+   min-height: 70vh;
     display: flex;
     flex-wrap: wrap;
     margin-top: 12vh;
@@ -109,4 +110,10 @@
 .menu-btn{
     margin-right: 45%;
    
+}
+.price-filter{
+    margin-top: 10vh;
+    border: 1px solid red;
+    margin-left: 8%;
+    margin-right: 8%;
 }

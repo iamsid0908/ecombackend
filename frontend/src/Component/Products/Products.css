@@ -6,6 +6,7 @@
     height: 350px;
     transition: transform 0.4s ease;
     border-radius: 10px;
+
 }
 .card:hover{
     transform: translateY(-10px);
@@ -26,4 +27,11 @@
     justify-content: center;
     border-radius: 10px;
     
+}
+.spinner{
+    margin-left: 8%;
+    margin-right: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
