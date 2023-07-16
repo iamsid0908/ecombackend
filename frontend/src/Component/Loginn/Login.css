@@ -1,0 +1,14 @@
+.login1-form{
+    margin-top: 10vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-data{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

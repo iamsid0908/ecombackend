@@ -1,0 +1,36 @@
+.address{
+    margin-top: 12vh;
+    /* border: 1px solid red; */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.address-ele{
+    width: 500px;
+    background-color: #dddd;
+    border-radius: 10px;
+
+}
+.add-l{
+    font-size: 17px;
+    margin: 6px;
+}
+.add-i{
+  
+    margin: 6px;
+}
+
+
+.sub-btn{
+    width: 110px;
+    margin: 5px;
+    margin-left: 150px;
+    height: 40px;
+    background-color: tomato;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}

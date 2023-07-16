@@ -13,6 +13,7 @@ exports.userRegister=async(req,res)=>{
         password,
         avatar,
     })
+    
    sendToken(user,201,res)
 }catch(err){
     res.status(404).json({
@@ -31,7 +32,7 @@ exports.userLogin=async(req,res,next)=>{
         }
         const user=await userModel.findOne({email:email}).select("+password");
         if(!user){
-            return res.status(4004).send({message:"user not found"});
+            return res.status(404).send({message:"user not found"});
         }
         
         const isPasswordMatched=await user.comparePassword(password);

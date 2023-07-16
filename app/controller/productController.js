@@ -12,7 +12,8 @@ exports.createProduct=async(req,res,next)=>{
     })
 }catch{
     res.status(404).send({message:"something error"})
-}}
+}
+}
 
 
 

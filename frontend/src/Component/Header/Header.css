@@ -4,12 +4,13 @@
     justify-content: left;
     
     background-color: aqua;
-    height: 7vh;
+    height: 10vh;
    
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+
 }
 .slidebar{
     height: 100vh;
@@ -60,4 +61,40 @@ ul li:hover{
 .backdrop--open{
     display: block;
     z-index: 999;
+}
+.avatar{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 1px solid gray;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.credentials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    float: right;
+    flex: 1;
+}
+.menu-btn{
+   
+    width: 50px;
+
+}
+.menu{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.l2{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

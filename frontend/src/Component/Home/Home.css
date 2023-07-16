@@ -92,14 +92,14 @@
   
 }
 .products{
-   border: 1px solid red;
+   border: 1px solid gray;
    min-height: 70vh;
     display: flex;
     flex-wrap: wrap;
     margin-top: 12vh;
     margin-left: 8%;
     margin-right: 8%;
-
+    border-radius: 10px;
 }
 .menu{
     margin-left: 10%;
@@ -111,9 +111,13 @@
     margin-right: 45%;
    
 }
+.range{
+    width: 100px;
+}
 .price-filter{
     margin-top: 10vh;
-    border: 1px solid red;
+    border: 1px solid gray;
     margin-left: 8%;
     margin-right: 8%;
+    border-radius: 10px;
 }

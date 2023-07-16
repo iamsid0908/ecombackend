@@ -41,6 +41,7 @@ exports.newOrder= async(req,res,next)=>{
 exports.singleOrder=async(req,res,next)=>{
     try{
     const order=await OrderModel.findById(req.params.id).populate("user","name email");
+    
     if(!order){
         return res.status(400).send({message:"order not found"});
     }

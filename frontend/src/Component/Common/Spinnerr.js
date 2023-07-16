@@ -1,5 +1,5 @@
 import Spinner from 'react-bootstrap/Spinner';
-
+  
 function Spinnerr() {
   return (
     <>
@@ -7,6 +7,7 @@ function Spinnerr() {
     <span className="visually-hidden">Loading...</span>
   </Spinner>
   {/* <Spinner animation="border" variant="primary" /> */}
+ 
   </>
   );
 }

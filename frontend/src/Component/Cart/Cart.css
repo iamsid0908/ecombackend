@@ -1,0 +1,75 @@
+.text{
+    color: red;
+   
+    height: 100px;
+}
+.cart-parent{
+    margin-top: 15vh;
+}
+
+.cart-icon{
+    text-align: center;
+    
+    
+}
+.rem-btn{
+    flex: 1;
+}
+.cart-items{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 10px;
+}
+.cart-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    border: 1px solid gray;
+
+}
+.cart-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.3;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+
+}
+.quan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chekout-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.tprice{
+    flex: 2;
+}
+.check{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.5;
+    height: 2.7em;
+    background-color: tomato;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.rem-btn{
+    cursor: pointer;
+    height: 2.5em;
+    background-color:skyblue;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}

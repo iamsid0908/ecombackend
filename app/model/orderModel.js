@@ -45,9 +45,9 @@ const orderSchema = new mongoose.Schema({
       },
       image: {
         type: String,
-        required: true,
+        // required: true,
       },
-      product: {
+      id: {
         type: mongoose.Schema.ObjectId,
         ref: "Product",
         required: true,
@@ -61,12 +61,10 @@ const orderSchema = new mongoose.Schema({
   },
   paymentInfo: {
     id: {
-      type: String,
-      required: true,
+      type: String
     },
     status: {
-      type: String,
-      required: true,
+      type: String
     },
   },
   paidAt: {
@@ -106,3 +104,7 @@ const orderSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("Order", orderSchema);
+
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQyMzFhZjRkNjBmZTIxMjFiNTYzMCIsImlhdCI6MTY4NTg5NTQwNSwiZXhwIjoxNjg2MzI3NDA1fQ.rmbdVWX6laR1xxA7zQhaqGIHjFJYj4wZQfy8LpUz-DweyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQyMzFhZjRkNjBmZTIxMjFiNTYzMCIsImlhdCI6MTY4NTg5NTQwNSwiZXhwIjoxNjg2MzI3NDA1fQ.rmbdVWX6laR1xxA7zQhaqGIHjFJYj4wZQfy8LpUz-Dw
+// eyJpZCI6IjY0MjQyMzFhZjRkNjBmZTIxMjFiNTYzMCIsImlhdCI6MTY4NzI1MTgzMSwiZXhwIjoxNjg3NjgzODMxfQ.Gk01RTeKjb7RpDjHmK4qzRnOFPVgL1721YS7EKH0VTU
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQyMzFhZjRkNjBmZTIxMjFiNTYzMCIsImlhdCI6MTY4NzI1MTk3OCwiZXhwIjoxNjg3NjgzOTc4fQ.PVRkx81pKQbozD2IFrT73JIQ3CzhqhDrNiw5qvNv5JM

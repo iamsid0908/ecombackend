@@ -1,0 +1,58 @@
+.confi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirmorder{
+    margin-top: 15vh;
+    /* border: 1px solid green; */
+}
+
+.ship{
+    font-size: 25px;
+    font-weight: 300;
+}
+.ship-info{
+    font-weight: 300;
+}
+.yr-cart{
+    margin-top: 5vh;
+}
+.price{
+    margin-left: 10%;
+}
+.con-cart{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 15px;
+}
+.order{
+    /* border: 1px solid green; */
+    width: 400px;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 10%;
+
+}
+.order-para{
+    font-size: 25px;
+    font-weight: 300;
+  margin-left: 30px;
+}
+.o-para{
+    font-weight: 300;
+    margin-left: 50px;
+}
+.pro-btn{
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 200px;
+    background-color: tomato;
+    margin-left: 50px;
+    border-radius: 10px;
+}

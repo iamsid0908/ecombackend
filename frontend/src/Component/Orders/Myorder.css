@@ -1,0 +1,56 @@
+.myorders{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: tomato;
+    min-height: 90vh;
+}
+.name1{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: 1px solid gray;
+    margin-top: 5px;
+}
+.order-name{
+    /* border:1px solid green; */
+    padding: 10px;
+    /* margin: 10px; */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+    margin-top: 15px;
+}
+.order-lower{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* border: 1px solid red; */
+
+}
+.view-details{
+    /* margin-left: 60%; */
+    width: 10em;
+    height: 40px;
+    text-align: center;
+
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: tomato;
+
+}
+.orderele{
+    /* border: 5px solid gray; */
+    width: 900px;
+    background-color: white;
+    
+}
+.pro-name{
+    margin-left: 50px;
+}
+.pro-price{
+    margin-left: 50px;
+}
+.pro-quan{
+    margin-left: 50px;
+}

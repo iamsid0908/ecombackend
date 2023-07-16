@@ -1,49 +1,23 @@
 import React   from 'react'
 import "./Register.css"
 import { DataContext } from '../Context/DataContext';
-import {useState,useContext } from 'react';
+import {useContext } from 'react';
 import Axios from "axios"
+import{Link,useNavigate} from "react-router-dom"
 function Register() {
 
     
-    const [avatar,setAvatar]=useState("")
+    const navigate = useNavigate();
     const{resname,
         setResname,
-        resemail,
-        setResemail,
-        respassword,
-        setRespassword}=useContext(DataContext);
+        resemail,setResemail,
+        respassword,setRespassword,
+        avatar,setAvatar,
+        
+                 
+    }=useContext(DataContext);
     
-    // const user={email,password}
-
-    // const handleLogin=(e)=>{
-    //     e.preventDefault();
-    //     console.log(user);
-    //     fetch("http://localhost:8000/api/login",{
-    //         method:"POST",
-    //         body:JSON.stringify(user),
-    //         mode:'cors',   
-    //         headers:{
-    //             'Content-Type': 'application/json'
-    //         }
-    //     })
-    //     .then(data=>data.json())
-    //     .then((data)=>{
-    //         if(data.success!==false){
-    //         localStorage.setItem("jwt",data.token)
-    //         console.log(data.user);
-    //         console.log("good");
-    //         alert("sucess");
-    //         }else{
-    //             alert("err")
-    //         }
-    //     })
-    //     .catch((err)=>{
-    //         console.log(err);
-    //         alert("err");
-    //     })
-    // }
-   
+    
     
 
     const upload=(file)=>{
@@ -75,7 +49,13 @@ function Register() {
         .then((data)=>{
             if(data.success!==false){
             console.log(data);
+            localStorage.setItem("jwt",data.token)
+            localStorage.setItem("name",data.user.name)
+            localStorage.setItem("avatar",data.user.avatar)
+            localStorage.setItem("id",data.user._id)
+            navigate("/");
             alert("you are registered");
+            window.location.reload(false);
             }else{
                 alert("credential are wrong");
             }
@@ -85,6 +65,7 @@ function Register() {
             alert("err");
         })
     }
+   
 
   return (
     <>
@@ -107,7 +88,8 @@ function Register() {
         <button className='resgister-btn' onClick={handle2}>register</button>
 
         <p>Forgotten password</p>
-        <p>Sing-up</p>
+        <Link to="/login"><p>Sing-up</p> </Link>
+        
 
         {/* <img src={avatar} width="100px" height="100px" alt=''/> */}
     </div>

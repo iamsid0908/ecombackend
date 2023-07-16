@@ -18,6 +18,10 @@ function Home() {
     price,
     data,
     spinner}=useContext(DataContext);
+
+    
+    
+
   const handle=async()=>{
     if(input===""){
       return;
@@ -32,7 +36,7 @@ function Home() {
 const handlePrice=(e)=>{
   setPrice(e.target.value);
   const findPrice=e.target.value;
-  console.log(findPrice);
+  
   const pricedata=allData.filter((Dress)=>{
     return Dress.price<=findPrice;
  })
@@ -84,7 +88,8 @@ const handlePrice=(e)=>{
     <div className='price-filter'>
       <div>
       <h3>Price Range</h3>
-          <input type="range"  min="400" max="19000" onInput={handlePrice}  value={price}/>
+          <input type="range"  min="400" max="19000" onInput={handlePrice}  value={price}
+           className="range"/>
           <p>Price Rs.{price}</p>
       </div>
     </div>
